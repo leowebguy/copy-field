@@ -3,23 +3,28 @@ Copy Field plugin for Craft 4
 
 A minimal click copy field for Craft CP
 
-_Thanks to https://github.com/igorescobar/jQuery-Mask-Plugin_
+## Installation
 
-### Installation
-
+Composer
 ```bash
-composer require leowebguy/masked-fields
+composer require leowebguy/copy-field -w && php craft plugin/install copy-field
 ```
 
-On your Control Panel, go to Settings → Plugins → "Masked Fields" → Install
+DDEV
+```bash
+ddev composer require leowebguy/copy-field -w && ddev exec php craft plugin/install copy-field
+```
 
-### Usage
+## Usage
 
-![Screenshot](resources/masked1.png)
+Set field type
 
-![Screenshot](resources/masked2.png)
+![Screenshot](resources/copy3.png)
 
-### New formats
+Click and Copy
 
-PR into https://github.com/leowebguy/masked-fields
-following https://igorescobar.github.io/jQuery-Mask-Plugin patterns/schema
+![Screenshot](resources/copy2.png)
+
+### Need something?
+
+PR into https://github.com/leowebguy/copy-field
