@@ -1,0 +1,29 @@
+section {
+    margin: 4rem auto;
+}
+
+.clipCopy {
+    position: relative;
+}
+
+.clipCopy:after {
+    content: '';
+    font-size: 0.8rem;
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.clipCopy.success:after {
+    content: 'copied';
+    color: var(--success-color);
+    opacity: 1;
+}
+
+.clipCopy.error:after {
+    content: 'error';
+    color: var(--error-color);
+    opacity: 1;
+}

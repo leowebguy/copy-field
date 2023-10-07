@@ -1,0 +1,20 @@
+{% import "_includes/forms" as forms %}
+
+<div class="copytext">
+    {{ forms.text({
+        class: null,
+        name: name,
+        value: value
+    }) }}
+    {{ tag('a', {
+        class: 'btn clipCopy',
+        title: 'Copy to clipboard'|t,
+        href: 'javascript:void(0);',
+        aria: {
+            label: 'Copy to clipboard'|t
+        },
+        data: {
+            icon: 'clipboard',
+        }
+    }) }}
+</div>
