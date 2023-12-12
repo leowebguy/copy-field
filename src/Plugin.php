@@ -17,6 +17,7 @@ use craft\services\Fields;
 use craft\web\View;
 use leowebguy\copyfield\assets\Assets;
 use leowebguy\copyfield\fields\CopyField;
+use leowebguy\copyfield\fields\CopyFieldReadOnly;
 use yii\base\Event;
 
 class Plugin extends BasePlugin
@@ -51,6 +52,7 @@ class Plugin extends BasePlugin
             Fields::EVENT_REGISTER_FIELD_TYPES,
             function(RegisterComponentTypesEvent $event) {
                 $event->types[] = CopyField::class;
+                $event->types[] = CopyFieldReadOnly::class;
             }
         );
 
