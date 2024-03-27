@@ -32,12 +32,12 @@
     "not_operator_with_successor_space": false,
     "ordered_imports": true,
     "phpdoc_add_missing_param_annotation": false,
-    "phpdoc_align": true,
-    "phpdoc_indent": true,
+    "phpdoc_align": false,
+    "phpdoc_indent": false,
     "phpdoc_order": true,
     "phpdoc_scalar": true,
     "single_line_after_imports": false,
-    "single_space_after_construct": false,
+    "single_space_around_construct": false,
     "trim_array_spaces": true
   }
 }

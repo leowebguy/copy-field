@@ -4,8 +4,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2023, leowebguy
- * @license    MIT
+ * @copyright  Copyright (c) 2024, leowebguy
  */
 
 namespace leowebguy\copyfield\fields;
@@ -29,7 +28,7 @@ class CopyFieldReadOnly extends Field
     }
 
     /**
-     * @param  mixed                 $value
+     * @param  mixed $value
      * @param  ElementInterface|null $element
      * @throws Exception
      * @throws LoaderError
