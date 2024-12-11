@@ -12,13 +12,14 @@ namespace leowebguy\copyfield\fields;
 
 use Craft;
 use craft\base\ElementInterface;
-use craft\base\Field;
+use craft\base\PreviewableFieldInterface;
+use craft\fields\PlainText;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 use yii\base\Exception;
 
-class CopyField extends Field
+class CopyField extends PlainText implements PreviewableFieldInterface
 {
     /**
      * @return string
@@ -29,13 +30,13 @@ class CopyField extends Field
     }
 
     /**
-     * @param  mixed                 $value
-     * @param  ElementInterface|null $element
-     * @throws Exception
+     * @param mixed $value
+     * @param ElementInterface|null $element
+     * @return string
      * @throws LoaderError
      * @throws RuntimeError
      * @throws SyntaxError
-     * @return string
+     * @throws Exception
      */
     public function getInputHtml(mixed $value, ?ElementInterface $element = null): string
     {
