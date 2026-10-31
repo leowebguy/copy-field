@@ -1,4 +1,5 @@
 <?php
+
 /**
  * A minimal click copy field for Craft CP
  *
@@ -19,6 +20,9 @@ use leowebguy\copyfield\fields\CopyField;
 use leowebguy\copyfield\fields\CopyFieldReadOnly;
 use yii\base\Event;
 
+/**
+ * @method static Plugin|null getInstance()
+ */
 class Plugin extends BasePlugin
 {
     public bool $hasCpSection = false;
@@ -36,7 +40,7 @@ class Plugin extends BasePlugin
         Event::on(
             View::class,
             View::EVENT_BEFORE_RENDER_TEMPLATE,
-            static function() {
+            static function (): void {
                 if (Craft::$app->getRequest()->getIsCpRequest()) {
                     $view = Craft::$app->getView();
                     $view->registerAssetBundle(Assets::class);
@@ -47,7 +51,7 @@ class Plugin extends BasePlugin
         Event::on(
             Fields::class,
             Fields::EVENT_REGISTER_FIELD_TYPES,
-            function(RegisterComponentTypesEvent $event) {
+            static function (RegisterComponentTypesEvent $event): void {
                 $event->types[] = CopyField::class;
                 $event->types[] = CopyFieldReadOnly::class;
             }

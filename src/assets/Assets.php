@@ -1,4 +1,5 @@
 <?php
+
 /**
  * A minimal click copy field for Craft CP
  *
@@ -20,11 +21,11 @@ class Assets extends AssetBundle
         $this->depends = [CpAsset::class];
 
         $this->css = [
-            'css/copy.css'
+            'css/copy.css',
         ];
 
         $this->js = [
-            'js/copy.js'
+            'js/copy.js',
         ];
 
         parent::init();

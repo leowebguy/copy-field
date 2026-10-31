@@ -9,7 +9,7 @@
     "field",
     "cp"
   ],
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "craft-plugin",
   "license": "proprietary",
   "authors": [
@@ -21,8 +21,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^8.2",
-    "craftcms/cms": "^5.0"
+    "php": "^8.2 || ^8.3 || ^8.4 || ^8.5",
+    "craftcms/cms": "^5.0.0"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
@@ -38,6 +38,9 @@
   "extra": {
     "name": "Copy Field",
     "handle": "copy-field",
+    "developer": "Leo",
+    "developerUrl": "https://github.com/leowebguy",
+    "documentationUrl": "https://github.com/leowebguy/copy-field/blob/main/README.md",
     "class": "leowebguy\\copyfield\\Plugin"
   },
   "config": {
@@ -50,10 +53,13 @@
     }
   },
   "scripts": {
-    "cs": "vendor/bin/ecs check src --ansi",
+    "check-cs": "vendor/bin/ecs check src --ansi",
     "fix-cs": "vendor/bin/ecs check src --ansi --fix",
-    "stan": "vendor/bin/phpstan analyse src",
+    "cs": "vendor/bin/ecs check src --ansi",
+    "phpstan": "vendor/bin/phpstan analyse",
+    "stan": "vendor/bin/phpstan analyse",
     "rector": "vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-50.php",
-    "pint": "vendor/bin/pint -v src"
+    "pint": "vendor/bin/pint -v src",
+    "pint-test": "vendor/bin/pint --test -v src"
   }
 }

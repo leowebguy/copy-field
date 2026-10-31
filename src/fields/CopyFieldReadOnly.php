@@ -1,4 +1,5 @@
 <?php
+
 /**
  * A minimal click copy field for Craft CP
  *
@@ -28,8 +29,8 @@ class CopyFieldReadOnly extends Field
     }
 
     /**
-     * @param  mixed $value
-     * @param  ElementInterface|null $element
+     * @param mixed $value
+     * @param ElementInterface|null $element
      * @throws Exception
      * @throws LoaderError
      * @throws RuntimeError
@@ -42,7 +43,7 @@ class CopyFieldReadOnly extends Field
             'copy-field/fieldread',
             [
                 'name' => $this->handle,
-                'value' => $value
+                'value' => $value,
             ]
         );
     }
