@@ -10,7 +10,6 @@
 .sass-cache
 .cache
 .php_cs.cache
-ecs.php
 .DS_Store
 .project
 .settings
