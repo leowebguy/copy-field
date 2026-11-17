@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.1.1 - 2026.11.17
+### Fixed
+- Extend `PlainText` field to restore compatibility with stored field settings (such as `byteLimit`) and implement `PreviewableFieldInterface`
+
 ## 2.1.0 - 2026.10.30
 ### Added
 - Full compatibility with PHP `^8.2 || ^8.3 || ^8.4 || ^8.5` and Craft CMS `^5.0.0`
