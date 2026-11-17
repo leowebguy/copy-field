@@ -12,13 +12,14 @@ namespace leowebguy\copyfield\fields;
 
 use Craft;
 use craft\base\ElementInterface;
-use craft\base\Field;
+use craft\base\PreviewableFieldInterface;
+use craft\fields\PlainText;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 use yii\base\Exception;
 
-class CopyField extends Field
+class CopyField extends PlainText implements PreviewableFieldInterface
 {
     /**
      * @return string
